@@ -91,6 +91,11 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/* Minimum style to differ from unordered list */
+ol {
+  list-style-type: decimal;
+}
+
 /* Ref [Z]: Make sure dividers are visible by default */
 :where(hr) {
   border-top: 1px solid currentColor;
