@@ -1,7 +1,9 @@
 import { CodeDoc } from "./util/CodeDoc"
 
 export function Inline() {
-return <><p>
+  return (
+    <>
+      <p>
         <b>Bold</b> <CodeDoc>b</CodeDoc>
       </p>
       <p>
@@ -24,4 +26,7 @@ return <><p>
       </p>
       <p>
         <abbr title="to be done">TBD</abbr> <CodeDoc>abbr</CodeDoc>
-      </p></>}
+      </p>
+    </>
+  )
+}

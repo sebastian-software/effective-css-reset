@@ -1,14 +1,12 @@
-import React from 'react';
+import React from "react"
 
-import { Header } from './Header';
-import './page.css';
+import { Header } from "./Header"
+import "./page.css"
 
 type User = {
-  name: string;
-};
+  name: string
+}
 
 export const Page: React.FC = () => {
-  return (
-    <h1>Hello World</h1>
-  );
-};
+  return <h1>Hello World</h1>
+}

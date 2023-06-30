@@ -11,6 +11,6 @@ const codeStyle = {
   marginLeft: "0.5rem"
 }
 
-export function CodeDoc({children}: PropsWithChildren) {
+export function CodeDoc({ children }: PropsWithChildren) {
   return <div style={codeStyle}>{children}</div>
 }
