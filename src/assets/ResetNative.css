@@ -1,0 +1,263 @@
+/*
+  Inspired/Copied by/from:
+  - [A] https://github.com/elad2412/the-new-css-reset
+  - [B] https://github.com/sindresorhus/modern-normalize
+  - [C] https://www.joshwcomeau.com/css/custom-css-reset/
+  - [D] https://piccalil.li/blog/a-modern-css-reset/
+  - [E] https://css-tricks.com/snippets/css/system-font-stack/#aa-method-1-system-fonts-at-the-element-level
+  - [F] https://tailwindcss.com/docs/preflight + https://unpkg.com/tailwindcss@3.2.2/src/css/preflight.css
+  - [Z] Custom
+*/
+
+/*
+  Some up-to-date features require somewhat modern browsers to work correctly::after
+  - Chrome, Edge: version 88+
+  - Firefox: version 84+
+  - Safari/iOS: version 14+
+  - Opera: version 75+
+  - Samsung Browser: version 15+
+
+  See also:
+  - https://caniuse.com/css-unset-value
+  - https://caniuse.com/mdn-css_selectors_where
+*/
+
+/*
+================================================================================
+    GLOBAL RESET
+================================================================================
+*/
+
+/**
+ * Ref [A]: Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+ * - The "symbol *" part is to solve Firefox SVG sprite bug
+ * - See also: https://caniuse.com/css-unset-value
+ */
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+
+/* Ref [A]/[B]: Use a better box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Ref [A]: Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Ref [A]/[F]: Remove spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Ref [A]: Solving issue when using user-select:none on the <body> text input doesn't working (Safari only) */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* Ref [A]: Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* Ref [A]: Minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* Ref [A]: Reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* Ref [A]: Fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* Ref [A]: Revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element */
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* Ref [A]: Aply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+/*
+================================================================================
+    SECTION STYLES
+================================================================================
+*/
+
+/* Ref [B]/[F]: Add the correct text decoration in Chrome, Edge, and Safari. */
+abbr:where([title]) {
+  text-decoration: underline dotted;
+}
+
+/* Ref [B]: Add the correct font weight in Edge and Safari. */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Ref [B]: Improve consistency of default fonts in all browsers (https://github.com/sindresorhus/modern-normalize/issues/3)
+ * and correct the odd 'em' font sizing in all browsers.
+ */
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
+    monospace;
+  font-size: 1em;
+}
+
+/* Add the correct font size in all browsers. */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Ref [B]: Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/**
+ * Ref [B]:
+ * 1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+ * 2. Correct table border color inheritance in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+ */
+table {
+  text-indent: 0;
+  border-color: inherit;
+}
+
+/* Ref [B]: Add the correct height in Firefox. + Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655) */
+hr {
+  height: 0;
+  color: inherit;
+}
+
+/* Ref [B]/[C]: buttons and inputs don't inherit typographical styles from their parents => fix this */
+input,
+button,
+optgroup,
+textarea,
+select {
+  font: inherit;
+}
+
+/** Ref [B]: Remove the inheritance of text transform in Edge and Firefox. */
+button,
+select {
+  text-transform: none;
+}
+
+/** Ref [B]: Correct the inability to style clickable types in iOS and Safari. */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/** Ref [B]: Remove the inner border and padding in Firefox. */
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/** Ref [B]: Restore the focus styles unset by the previous rule. */
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Ref [B]: Remove the additional ':invalid' styles in Firefox.
+ * See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+ */
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/** Ref [B]: Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers. */
+legend {
+  padding: 0;
+}
+
+/** Ref [B]: Add the correct vertical alignment in Chrome and Firefox. */
+progress {
+  vertical-align: baseline;
+}
+
+/** Ref [B]: Correct the cursor style of increment and decrement buttons in Safari. */
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Ref [B]:
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/** Ref [B]: Remove the inner padding in Chrome and Safari on macOS. */
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Ref [B]:
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to 'inherit' in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Ref [B]: Add the correct display in Chrome and Safari. */
+summary {
+  display: list-item;
+}

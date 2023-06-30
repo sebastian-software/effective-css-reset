@@ -1,0 +1,10 @@
+{
+  "name": "@effective/css-reset",
+  "version": "1.0.0",
+  "description": "Effective CSS Reset",
+  "main": "dist/index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

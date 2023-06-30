@@ -1,0 +1,113 @@
+/*
+  Inspired/Copied by/from:
+  - [A] https://github.com/elad2412/the-new-css-reset
+  - [B] https://github.com/sindresorhus/modern-normalize
+  - [C] https://www.joshwcomeau.com/css/custom-css-reset/
+  - [D] https://piccalil.li/blog/a-modern-css-reset/
+  - [E] https://css-tricks.com/snippets/css/system-font-stack/#aa-method-1-system-fonts-at-the-element-level
+  - [F] https://tailwindcss.com/docs/preflight + https://unpkg.com/tailwindcss@3.2.2/src/css/preflight.css
+  - [Z] Custom
+*/
+
+/*
+================================================================================
+    GLOBAL ENHANCEMENTS
+================================================================================
+*/
+
+html {
+  /* Ref [B]: Prevent adjustments of font size after orientation changes in iOS. */
+  -webkit-text-size-adjust: 100%;
+
+  /* Ref [B]: Use a more readable tab size (opinionated). */
+  -moz-tab-size: 2;
+  tab-size: 2;
+
+  /* Ref [C]: Tweaking line-height, The WCAG criteria states that line-height should be at least 1.5. */
+  line-height: 1.5;
+}
+
+body {
+  /*
+   * Ref [B]/[E]/[Z]: Prefers 'native' OS fonts with the benefits of very good rendering (even at small sizes) + no downloads required.
+   * This is okay since we are white-label and do not need any explicit font to match the CI of the affected company regarding that aspect.
+   * See also:
+   * - https://caniuse.com/font-family-system-ui
+   * - https://css-tricks.com/snippets/css/system-font-stack/#aa-method-1-system-fonts-at-the-element-level
+   */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+  /** Ref [F]: Inherit line-height from `html` so users can set them as a class directly on the `html` element. */
+  line-height: inherit;
+
+  /**
+   * Ref [C]/[Z]: Adjust font smoothing for Apple devices for Retina times.
+   * MacOS is the only operating system to use subpixel-antialiasing, and so this rule has no effect on Windows, Linux, or mobile devices.
+   */
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+================================================================================
+    ELEMENT ENHANCEMENTS
+================================================================================
+*/
+
+/* Ref [D]: Enable smooth scrolling */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Ref [A]/[C]: Sensible media defaults (unify to block rendering) + block ability to exceed their container */
+:where(img, picture, video, canvas, svg) {
+  display: block;
+  max-width: 100%;
+}
+
+/* Ref [Z]: Adding simple border to input fields for a slight separation from normal text */
+:where(
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    input[type="email"],
+    input[type="search"],
+    input[type="tel"],
+    select
+  ) {
+  border: 1px solid grey;
+}
+
+/* Ref [C]: give permission to use hard wraps when no soft wrap opportunities can be found */
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Ref [Z]: Make sure dividers are visible by default */
+:where(hr) {
+  border-top: 1px solid grey;
+}
+
+:where(em) {
+  font-style: italic;
+}
+
+/** Ref [F]: Make sure disabled elements don't get the pointer cursor and block any interaction. */
+:disabled,
+[aria-disabled="true"] {
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Ref [D]: Improve link elements */
+:where(a) {
+  text-decoration-skip-ink: auto;
+}
