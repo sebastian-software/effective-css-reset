@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rimraf dist && cpy src/assets dist/assets && tsc",
     "format": "prettier --write src",
+    "release": "release-it",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
