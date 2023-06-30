@@ -76,7 +76,7 @@ html:focus-within {
     input[type="tel"],
     select
   ) {
-  border: 1px solid grey;
+  border: 1px solid currentColor;
 }
 
 /* Ref [C]: give permission to use hard wraps when no soft wrap opportunities can be found */
@@ -93,10 +93,14 @@ h6 {
 
 /* Ref [Z]: Make sure dividers are visible by default */
 :where(hr) {
-  border-top: 1px solid grey;
+  border-top: 1px solid currentColor;
 }
 
-:where(em) {
+:where(strong, b) {
+  font-weight: bold;
+}
+
+:where(em, i) {
   font-style: italic;
 }
 

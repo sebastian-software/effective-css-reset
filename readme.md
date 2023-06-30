@@ -12,6 +12,12 @@ Based on the work of various people:
 - https://tailwindcss.com/docs/preflight + https://unpkg.com/tailwindcss@3.2.2/src/css/preflight.css
 - https://cloudfour.com/thinks/childish-font-sizes/
 
+Technical Highlights:
+
+- Based on `:where` selector to reduce selector specificity and allow easier theming/override.
+- Responsive typo from `16px` => `19px` depending on actual screen size.
+- Cross-browser sans-serif system fonts (`system-ui`)
+
 ## License
 
 [Apache License; Version 2.0, January 2004](http://www.apache.org/licenses/LICENSE-2.0)

@@ -59,19 +59,26 @@ table {
 }
 
 /* Ref [A]: Solving issue when using user-select:none on the <body> text input doesn't working (Safari only) */
-input,
-textarea {
+:where(input, textarea) {
   -webkit-user-select: auto;
 }
 
 /* Ref [A]: Revert the 'white-space' property for textarea elements on Safari */
-textarea {
+:where(textarea) {
   white-space: revert;
 }
 
 /* Ref [A]: Minimum style to allow to style meter element */
-meter {
-  -webkit-appearance: revert;
+:where(meter) {
+  appearance: revert;
+}
+
+/* Apply minimum styles for otherwise unusable elements */
+:where(input[type="radio"], input[type="checkbox"]) {
+  appearance: revert;
+}
+
+:where(select) {
   appearance: revert;
 }
 
@@ -111,12 +118,6 @@ meter {
 /* Ref [B]/[F]: Add the correct text decoration in Chrome, Edge, and Safari. */
 abbr:where([title]) {
   text-decoration: underline dotted;
-}
-
-/* Ref [B]: Add the correct font weight in Edge and Safari. */
-b,
-strong {
-  font-weight: bolder;
 }
 
 /**
@@ -252,9 +253,7 @@ progress {
  */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  /* 1 */
   font: inherit;
-  /* 2 */
 }
 
 /* Ref [B]: Add the correct display in Chrome and Safari. */
