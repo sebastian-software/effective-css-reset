@@ -4,7 +4,8 @@
   "description": "Effective CSS Reset",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rimraf dist && cpy src/assets dist/assets && tsc",
+    "build": "rimraf dist && cpy src/assets/**/* dist/assets && tsc",
+    "prepare": "npm run build",
     "format": "prettier --write src",
     "release": "release-it",
     "storybook": "storybook dev -p 6006",
