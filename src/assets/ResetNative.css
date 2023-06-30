@@ -78,10 +78,6 @@ table {
   appearance: revert;
 }
 
-:where(select) {
-  appearance: revert;
-}
-
 /* Ref [A]: Reset default text opacity of input placeholder */
 ::placeholder {
   color: unset;
