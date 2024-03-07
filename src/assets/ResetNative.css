@@ -226,12 +226,6 @@ progress {
   vertical-align: baseline;
 }
 
-/** Ref [B]: Correct the cursor style of increment and decrement buttons in Safari. */
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
 /**
  * Ref [B]:
  * 1. Correct the odd appearance in Chrome and Safari.
@@ -274,6 +268,26 @@ summary {
   all: unset;
 }
 
+/* Ref [Z]: Remove spinning buttons in number fields. */
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  display: none;
+}
+
+/** Ref [Z]: Reset slider thumb to prevent obscure non standard styles. */
+::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: calc(1lh);
+  aspect-ratio: 1/1;
+
+  /** I was looking for a built-in color which resembles the default look */
+  background: SelectedItem;
+
+  /* Use border to add some margin to the outer box, reducing the visual size of the knob */
+  background-clip: padding-box;
+  border-radius: 100%;
+  border: calc(1lh / 4) solid transparent;
+}
 
 ::-webkit-color-swatch-wrapper {
   padding: 0;
