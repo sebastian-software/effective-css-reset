@@ -247,11 +247,6 @@ progress {
   -webkit-appearance: none;
 }
 
-/** Ref [Z]: Remove widely custom search cancel button. */
-::-webkit-search-cancel-button {
-  display: none;
-}
-
 /**
  * Ref [B]:
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -265,4 +260,23 @@ progress {
 /* Ref [B]: Add the correct display in Chrome and Safari. */
 summary {
   display: list-item;
+}
+
+/** Ref [Z]: Remove widely custom search cancel button. */
+::-webkit-search-cancel-button {
+  display: none;
+}
+
+/** Ref [Z]: Remove styling from upload button. */
+::-webkit-file-upload-button {
+  all: unset;
+}
+
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-color-swatch {
+  border: none;
 }
