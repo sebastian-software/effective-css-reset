@@ -107,6 +107,13 @@ ol {
   list-style-type: decimal;
 }
 
+:where(button),
+input:where([type="button"], [type="reset"], [type="submit"]),
+::-webkit-file-upload-button {
+  border: 1px solid currentColor;
+  border-radius: 0.25rem;
+}
+
 /* Ref [Z]: Make sure dividers are visible by default */
 :where(hr) {
   border-top: 1px solid currentColor;
