@@ -1,8 +1,8 @@
-import { CodeDoc } from "./util/CodeDoc"
+import { BlockWrapper, CodeDoc } from "./util/HelperComponents"
 
 export function Inline() {
   return (
-    <>
+    <BlockWrapper>
       <p>
         <b>Bold</b> <CodeDoc>b</CodeDoc>
       </p>
@@ -27,6 +27,6 @@ export function Inline() {
       <p>
         <abbr title="to be done">TBD</abbr> <CodeDoc>abbr</CodeDoc>
       </p>
-    </>
+    </BlockWrapper>
   )
 }

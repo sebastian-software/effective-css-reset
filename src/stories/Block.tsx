@@ -1,8 +1,8 @@
-import { CodeDoc } from "./util/CodeDoc"
+import { BlockWrapper, CodeDoc } from "./util/HelperComponents"
 
 export function Block() {
   return (
-    <>
+    <BlockWrapper>
       <h1>
         Header <CodeDoc>h1</CodeDoc>
       </h1>
@@ -37,6 +37,6 @@ export function Block() {
           Unordered List Item <CodeDoc>ul</CodeDoc>
         </li>
       </ul>
-    </>
+    </BlockWrapper>
   )
 }
