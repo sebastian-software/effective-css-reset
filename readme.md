@@ -1,21 +1,28 @@
-## Effective CSS Reset
+## Effective / CSS Reset
 
-A super modern CSS Reset with sensible enhancements, system fonts and responsive typography.
+Welcome to the **Effective/CSS Reset**, a cutting-edge CSS reset infused with sensible enhancements and a keen focus on utilizing system fonts. Our project draws inspiration from the remarkable work of numerous pioneers in the field, incorporating best practices and innovative techniques to offer a streamlined and effective CSS foundation.
 
-Based on the work of various people:
+## Acknowledgements
 
-- https://github.com/elad2412/the-new-css-reset
-- https://github.com/sindresorhus/modern-normalize
-- https://www.joshwcomeau.com/css/custom-css-reset/
-- https://piccalil.li/blog/a-modern-css-reset/
-- https://css-tricks.com/snippets/css/system-font-stack/#aa-method-1-system-fonts-at-the-element-level
-- https://tailwindcss.com/docs/preflight + https://unpkg.com/tailwindcss@3.2.2/src/css/preflight.css
-- https://cloudfour.com/thinks/childish-font-sizes/
+This project builds upon the contributions of several key resources in the web development community. We extend our gratitude to the authors and maintainers of these works for their insights and innovations:
 
-Technical Highlights:
+- [The New CSS Reset by Elad Shechter](https://github.com/elad2412/the-new-css-reset)
+- [Modern Normalize by Sindre Sorhus](https://github.com/sindresorhus/modern-normalize)
+- [Custom CSS Reset by Josh W Comeau](https://www.joshwcomeau.com/css/custom-css-reset/)
+- [A Modern CSS Reset by Piccalilli](https://piccalil.li/blog/a-modern-css-reset/)
+- [System Font Stack Snippet by CSS-Tricks](https://css-tricks.com/snippets/css/system-font-stack/#aa-method-1-system-fonts-at-the-element-level)
+- [Tailwind CSS Preflight](https://tailwindcss.com/docs/preflight) alongside its [implementation](https://unpkg.com/tailwindcss@3.2.2/src/css/preflight.css)
+- [Childish Font Sizes by Cloud Four](https://cloudfour.com/thinks/childish-font-sizes/)
 
-- Based on `:where` selector to reduce selector specificity and allow easier theming/override.
-- Cross-browser sans-serif system fonts (`system-ui`)
+## Technical Highlights
+
+Our CSS reset is designed with several key principles in mind to ensure maximum compatibility, usability, and flexibility:
+
+- **Reduced Specificity**: Utilizes the `:where` selector to minimize selector specificity, facilitating easier theme customization and overrides.
+- **System Fonts**: Prioritizes cross-browser sans-serif system fonts (`system-ui`), complemented by a selection of compatible legacy font families. This approach is applied to both body text and pre-formatted code to ensure readability and consistency across platforms.
+- **Enhanced Form Fields**: Offers comprehensive support for native form fields, including search fields, date pickers, color selectors, and more. Each element is meticulously reset to enhance cross-browser compatibility, ensuring a uniform appearance and functionality across different environments.
+
+Our mission with the Effective/CSS Reset is to provide developers with a robust starting point that incorporates the latest web standards and design philosophies. By building on the collective wisdom of the web development community, we aim to deliver a CSS reset that stands at the forefront of modern web design.
 
 ## License
 

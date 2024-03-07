@@ -100,11 +100,6 @@ input:not(
   list-style-type: decimal;
 }
 
-/* Ref[Z]: Minimum style to differ from normal text */
-:where(a) {
-  text-decoration: underline;
-}
-
 :where(button),
 input:where([type="button"], [type="reset"], [type="submit"]),
 ::-webkit-file-upload-button,
@@ -118,6 +113,7 @@ input:where([type="button"], [type="reset"], [type="submit"]),
   border-top: 1px solid currentColor;
 }
 
+/* Ref [Z]: Make sure basic text formatting is still applied correctly and unified. */
 :where(strong, b) {
   font-weight: bold;
 }
@@ -133,7 +129,10 @@ input:where([type="button"], [type="reset"], [type="submit"]),
   pointer-events: none;
 }
 
-/* Ref [D]: Improve link elements */
 :where(a) {
+  /* Ref [D]: Improve link elements */
   text-decoration-skip-ink: auto;
+
+  /* Ref[Z]: Minimum style to differ from normal text */
+  text-decoration: underline;
 }

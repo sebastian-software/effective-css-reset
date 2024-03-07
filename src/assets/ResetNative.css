@@ -281,7 +281,7 @@ summary {
   aspect-ratio: 1/1;
 
   /** I was looking for a built-in color which resembles the default look */
-  background: SelectedItem;
+  background: currentColor;
 
   /* Use border to add some margin to the outer box, reducing the visual size of the knob */
   background-clip: padding-box;
