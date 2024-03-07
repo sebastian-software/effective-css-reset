@@ -252,7 +252,8 @@ progress {
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to 'inherit' in Safari.
  */
-::-webkit-file-upload-button {
+::-webkit-file-upload-button,
+::file-selector-button {
   -webkit-appearance: button;
   font: inherit;
 }
@@ -268,7 +269,8 @@ summary {
 }
 
 /** Ref [Z]: Remove styling from upload button. */
-::-webkit-file-upload-button {
+::-webkit-file-upload-button,
+::file-selector-button {
   all: unset;
 }
 
