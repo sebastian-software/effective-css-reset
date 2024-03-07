@@ -221,11 +221,6 @@ input[type="submit"] {
   box-shadow: none;
 }
 
-/** Ref [B]: Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers. */
-legend {
-  padding: 0;
-}
-
 /** Ref [B]: Add the correct vertical alignment in Chrome and Firefox. */
 progress {
   vertical-align: baseline;
