@@ -78,6 +78,15 @@ table {
   appearance: revert;
 }
 
+/* Ref [Z]: Apply minimum styles for otherwise unusable input color field */
+:where(input[type="color"]) {
+  /* use same height as other form elements */
+  /* the 2px addition is required for the border we apply to form inputs */
+  block-size: calc(1lh + 2px);
+  /* do not define a width but let the browser decide */
+  aspect-ratio: 1/1;
+}
+
 /* Ref [A]: Reset default text opacity of input placeholder */
 ::placeholder {
   color: unset;
