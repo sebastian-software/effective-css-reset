@@ -15,7 +15,6 @@ Based on the work of various people:
 Technical Highlights:
 
 - Based on `:where` selector to reduce selector specificity and allow easier theming/override.
-- Responsive typo from `16px` => `19px` depending on actual screen size.
 - Cross-browser sans-serif system fonts (`system-ui`)
 
 ## License
