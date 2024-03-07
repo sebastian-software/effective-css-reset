@@ -109,7 +109,7 @@ table {
   -webkit-user-select: auto;
 }
 
-/* Ref [A]: Aply back the draggable feature - exist only in Chromium and Safari */
+/* Ref [A]: Apply back the draggable feature - exist only in Chromium and Safari */
 :where([draggable="true"]) {
   -webkit-user-drag: element;
 }
