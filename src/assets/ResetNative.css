@@ -185,6 +185,7 @@ optgroup,
 textarea,
 select {
   font: inherit;
+  line-height: inherit;
 }
 
 /** Ref [B]: Remove the inheritance of text transform in Edge and Firefox. */
