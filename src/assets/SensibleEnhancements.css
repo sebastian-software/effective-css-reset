@@ -102,9 +102,10 @@ input:not(
 
 :where(button),
 input:where([type="button"], [type="reset"], [type="submit"]),
-::-webkit-file-upload-button {
+::-webkit-file-upload-button,
+::file-selector-button {
   border: 1px solid currentColor;
-  border-radius: 0.25rem;
+  background: ButtonFace;
 }
 
 /* Ref [Z]: Make sure dividers are visible by default */
