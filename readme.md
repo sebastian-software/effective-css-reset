@@ -1,4 +1,12 @@
-## Effective / CSS Reset
+## Effective/CSS Reset
+
+[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm]
+
+[sponsor]: https://www.sebastian-software.de
+[sponsor-img]: https://badgen.net/badge/Sponsored%20by/Sebastian%20Software/c41e54
+[npm]: https://www.npmjs.com/package/@effective/css-reset
+[npm-downloads-img]: https://badgen.net/npm/dm/@effective/css-reset
+[npm-version-img]: https://badgen.net/npm/v/@effective/css-reset
 
 Welcome to the **Effective/CSS Reset**, a cutting-edge CSS reset infused with sensible enhancements and a keen focus on utilizing system fonts. Our project draws inspiration from the remarkable work of numerous pioneers in the field, incorporating best practices and innovative techniques to offer a streamlined and effective CSS foundation.
 
