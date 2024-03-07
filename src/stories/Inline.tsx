@@ -16,6 +16,9 @@ export function Inline() {
         <em>Emphasis</em> <CodeDoc>em</CodeDoc>
       </p>
       <p>
+        <a href="#">Link</a> <CodeDoc>a</CodeDoc>
+      </p>
+      <p>
         Before<sup>Note</sup> <CodeDoc>sup</CodeDoc>
       </p>
       <p>

@@ -24,9 +24,19 @@ export function Block() {
       <p>
         Paragraph <CodeDoc>p</CodeDoc>
       </p>
+      <blockquote>
+        Blockquote <CodeDoc>blockquote</CodeDoc>
+      </blockquote>
+      <div>
+        <hr />
+        <CodeDoc>hr</CodeDoc>
+      </div>
       <pre>
         Pre <CodeDoc>pre</CodeDoc>
       </pre>
+      <form>
+        Form <CodeDoc>form</CodeDoc>
+      </form>
       <ol>
         <li>
           Ordered List Item <CodeDoc>ol</CodeDoc>
@@ -37,6 +47,20 @@ export function Block() {
           Unordered List Item <CodeDoc>ul</CodeDoc>
         </li>
       </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Header</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Data <CodeDoc>table</CodeDoc>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </BlockWrapper>
   )
 }
