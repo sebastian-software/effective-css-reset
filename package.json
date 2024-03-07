@@ -2,7 +2,9 @@
   "name": "@effective/css-reset",
   "version": "1.0.2",
   "description": "Effective CSS Reset",
+  "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rimraf dist && cpy src/assets/**/* dist/assets && tsc",
     "prepare": "npm run build",
