@@ -100,6 +100,11 @@ input:not(
   list-style-type: decimal;
 }
 
+/* Ref[Z]: Minimum style to differ from normal text */
+:where(a) {
+  text-decoration: underline;
+}
+
 :where(button),
 input:where([type="button"], [type="reset"], [type="submit"]),
 ::-webkit-file-upload-button,
