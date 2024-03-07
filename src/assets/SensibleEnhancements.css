@@ -76,15 +76,17 @@ html:focus-within {
 }
 
 /* Ref [Z]: Adding simple border to input fields for a slight separation from normal text */
-:where(
-    input[type="text"],
-    input[type="number"],
-    input[type="password"],
-    input[type="email"],
-    input[type="search"],
-    input[type="tel"],
-    select
-  ) {
+input:not(
+    :where(
+        [type="file"],
+        [type="checkbox"],
+        [type="radio"],
+        [type="button"],
+        [type="reset"],
+        [type="submit"]
+      )
+  ),
+:where(select) {
   border: 1px solid currentColor;
 }
 
