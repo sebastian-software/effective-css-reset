@@ -269,6 +269,10 @@ summary {
 }
 
 /* Ref [Z]: Remove spinning buttons in number fields. */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
   display: none;
