@@ -83,7 +83,8 @@ input:not(
         [type="radio"],
         [type="button"],
         [type="reset"],
-        [type="submit"]
+        [type="submit"],
+        [type="range"]
       )
   ),
 :where(select) {
