@@ -6,7 +6,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rimraf dist && cpy src/assets/**/* dist/assets && tsc",
+    "build": "rimraf dist && lightningcss --bundle --output-file dist/index.css --minify src/index.css",
     "prepare": "npm run build",
     "format": "prettier --write src",
     "release": "release-it",
@@ -48,6 +48,7 @@
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
     "cpy-cli": "^5.0.0",
+    "lightningcss-cli": "^1.24.1",
     "npm-check-updates": "^16.14.18",
     "prettier": "^3.2.5",
     "prop-types": "^15.8.1",
