@@ -49,6 +49,10 @@ export function Form() {
           <CodeDoc>input type=button</CodeDoc>
         </InlineWrapper>
         <InlineWrapper>
+          <input type="button" defaultValue="Reset Button" />
+          <CodeDoc>input type=reset</CodeDoc>
+        </InlineWrapper>
+        <InlineWrapper>
           <input type="file" />
           <CodeDoc>input type=file</CodeDoc>
         </InlineWrapper>

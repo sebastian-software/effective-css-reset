@@ -73,7 +73,7 @@ table {
   appearance: revert;
 }
 
-/* Apply minimum styles for otherwise unusable elements */
+/* Ref [Z]: Apply minimum styles for otherwise unusable elements */
 :where(input[type="radio"], input[type="checkbox"], input[type="range"], select) {
   appearance: revert;
 }
@@ -270,7 +270,7 @@ summary {
 
 /* Ref [Z]: Remove spinning buttons in number fields. */
 input[type=number] {
-  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 ::-webkit-inner-spin-button,
@@ -290,4 +290,12 @@ input[type=number] {
 ::-webkit-color-swatch {
   border: unset;
   border-radius: unset;
+}
+
+::-webkit-datetime-edit{
+  padding: 0;
+}
+
+input::-webkit-datetime-edit-year-field, input::-webkit-datetime-edit-month-field, input::-webkit-datetime-edit-day-field, input::-webkit-datetime-edit-hour-field, input::-webkit-datetime-edit-minute-field, input::-webkit-datetime-edit-second-field, input::-webkit-datetime-edit-millisecond-field, input::-webkit-datetime-edit-meridiem-field{
+  padding: 0;
 }
