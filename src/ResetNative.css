@@ -279,11 +279,11 @@ summary {
 }
 
 ::-moz-color-swatch {
-  border: none;
-  border-radius: 0;
+  border: unset;
+  border-radius: unset;
 }
 
 ::-webkit-color-swatch {
-  border: none;
-  border-radius: 0;
+  border: unset;
+  border-radius: unset;
 }
