@@ -295,8 +295,10 @@ summary {
 
 ::-moz-color-swatch {
   border: none;
+  border-radius: 0;
 }
 
 ::-webkit-color-swatch {
   border: none;
+  border-radius: 0;
 }
