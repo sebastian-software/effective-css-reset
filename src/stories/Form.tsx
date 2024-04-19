@@ -5,6 +5,7 @@ export function Form() {
     <fieldset>
       <legend>Fieldset Legend</legend>
       <BlockWrapper>
+        <h2 style={{fontSize: "2rem", marginTop: "2rem"}}>Text Fields:</h2>
         <InlineWrapper>
           <input type="text" defaultValue="Input Text" />
           <CodeDoc>input type=text</CodeDoc>
@@ -14,17 +15,11 @@ export function Form() {
           <CodeDoc>input type=search</CodeDoc>
         </InlineWrapper>
         <InlineWrapper>
-          <input type="button" defaultValue="Input Button" />
-          <CodeDoc>input type=button</CodeDoc>
-        </InlineWrapper>
-        <InlineWrapper>
           <input type="number" defaultValue="336699" />
           <CodeDoc>input type=number</CodeDoc>
         </InlineWrapper>
-        <InlineWrapper>
-          <input type="range" />
-          <CodeDoc>input type=range</CodeDoc>
-        </InlineWrapper>
+
+        <h2 style={{fontSize: "2rem", marginTop: "2rem"}}>Formatted:</h2>
         <InlineWrapper>
           <input type="date" />
           <CodeDoc>input type=date</CodeDoc>
@@ -37,15 +32,32 @@ export function Form() {
           <input type="time" />
           <CodeDoc>input type=time</CodeDoc>
         </InlineWrapper>
+
+        <h2 style={{fontSize: "2rem", marginTop: "2rem"}}>Special:</h2>
         <InlineWrapper>
           <input type="color" defaultValue="#6FF" />
           <CodeDoc>input type=color</CodeDoc>
+        </InlineWrapper>
+
+        <h2 style={{fontSize: "2rem", marginTop: "2rem"}}>Buttons:</h2>
+        <InlineWrapper>
+          <button>Button</button>
+          <CodeDoc>button</CodeDoc>
+        </InlineWrapper>
+        <InlineWrapper>
+          <input type="button" defaultValue="Input Button" />
+          <CodeDoc>input type=button</CodeDoc>
         </InlineWrapper>
         <InlineWrapper>
           <input type="file" />
           <CodeDoc>input type=file</CodeDoc>
         </InlineWrapper>
 
+        <h2 style={{fontSize: "2rem", marginTop: "2rem"}}>Native:</h2>
+        <InlineWrapper>
+          <input type="range" />
+          <CodeDoc>input type=range</CodeDoc>
+        </InlineWrapper>
         <InlineWrapper>
           <select>
             <option>Value</option>
