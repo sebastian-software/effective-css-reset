@@ -269,33 +269,46 @@ summary {
 }
 
 /* Ref [Z]: Remove spinning buttons in number fields. */
-input[type=number] {
+input[type="number"] {
   appearance: textfield;
 }
 
+/* Ref [Z]: Remove spinning buttons in number fields. */
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
   display: none;
 }
 
+/* Ref [Z]: Reset color field formatting */
 ::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 
+/* Ref [Z]: Reset color field formatting */
 ::-moz-color-swatch {
   border: unset;
   border-radius: unset;
 }
 
+/* Ref [Z]: Reset color field formatting */
 ::-webkit-color-swatch {
   border: unset;
   border-radius: unset;
 }
 
-::-webkit-datetime-edit{
+/* Ref [Z]: Remove padding to match normal input fields in Safari */
+::-webkit-datetime-edit {
   padding: 0;
 }
 
-input::-webkit-datetime-edit-year-field, input::-webkit-datetime-edit-month-field, input::-webkit-datetime-edit-day-field, input::-webkit-datetime-edit-hour-field, input::-webkit-datetime-edit-minute-field, input::-webkit-datetime-edit-second-field, input::-webkit-datetime-edit-millisecond-field, input::-webkit-datetime-edit-meridiem-field{
+/* Ref [Z]: Remove field padding to match normal input fields in Safari */
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-minute-field,
+::-webkit-datetime-edit-second-field,
+::-webkit-datetime-edit-millisecond-field,
+::-webkit-datetime-edit-meridiem-field {
   padding: 0;
 }
