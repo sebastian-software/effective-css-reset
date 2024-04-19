@@ -109,13 +109,13 @@ select {
 input:where([type="button"], [type="reset"], [type="submit"]),
 ::-webkit-file-upload-button,
 ::file-selector-button {
-  border: 1px solid currentColor;
+  border: 1px solid;
   background: ButtonFace;
 }
 
 /* Ref [Z]: Make sure dividers are visible by default */
 :where(hr) {
-  border-top: 1px solid currentColor;
+  border-top: 1px solid;
 }
 
 /* Ref [Z]: Make sure basic text formatting is still applied correctly and unified. */
