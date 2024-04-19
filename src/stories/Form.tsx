@@ -38,6 +38,14 @@ export function Form() {
           <input type="color" defaultValue="#6FF" />
           <CodeDoc>input type=color</CodeDoc>
         </InlineWrapper>
+        <InlineWrapper>
+          <select>
+            <option>First Value</option>
+            <option>Second Value</option>
+            <option>Third Value</option>
+          </select>
+          <CodeDoc>select</CodeDoc>
+        </InlineWrapper>
 
         <h2 style={{ fontSize: "2rem", marginTop: "2rem" }}>Buttons:</h2>
         <InlineWrapper>
@@ -63,12 +71,6 @@ export function Form() {
         <InlineWrapper>
           <input type="range" />
           <CodeDoc>input type=range</CodeDoc>
-        </InlineWrapper>
-        <InlineWrapper>
-          <select>
-            <option>Value</option>
-          </select>
-          <CodeDoc>select</CodeDoc>
         </InlineWrapper>
         <InlineWrapper>
           <input type="checkbox" id="chk1" />

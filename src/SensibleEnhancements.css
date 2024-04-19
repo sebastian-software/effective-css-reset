@@ -86,9 +86,13 @@ input:not(
         [type="submit"],
         [type="range"]
       )
-  ),
-:where(select) {
-  border: 1px solid currentColor;
+  ) {
+  border: 1px solid;
+}
+
+/* Ref [Z]: Adding simple border to input fields for a slight separation from normal text */
+select {
+  border: 1px solid;
 }
 
 /* Ref [C]: give permission to use hard wraps when no soft wrap opportunities can be found */
