@@ -1,6 +1,6 @@
 // Changes over the default config are marked with a double exclamation mark.
 
-module.exports = {
+export default {
   // We generally allow wider code lines, but for auto formatting this
   // is quite a good rule to produce readable code.
   // In ESLint we allow for code being 110 character long, comments 140 characters.
