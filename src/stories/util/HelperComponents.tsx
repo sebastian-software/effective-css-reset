@@ -31,5 +31,5 @@ export function InlineWrapper({ children }: PropsWithChildren) {
 }
 
 export function CodeDoc({ children }: PropsWithChildren) {
-  return <div style={codeStyle}>{children}</div>
+  return <span style={codeStyle}>{children}</span>
 }
