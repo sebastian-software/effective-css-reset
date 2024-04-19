@@ -274,21 +274,6 @@ summary {
   display: none;
 }
 
-/** Ref [Z]: Reset slider thumb to prevent obscure non standard styles. */
-::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: calc(1lh);
-  aspect-ratio: 1/1;
-
-  /** I was looking for a built-in color which resembles the default look */
-  background: currentColor;
-
-  /* Use border to add some margin to the outer box, reducing the visual size of the knob */
-  background-clip: padding-box;
-  border-radius: 100%;
-  border: calc(1lh / 4) solid transparent;
-}
-
 ::-webkit-color-swatch-wrapper {
   padding: 0;
 }
