@@ -102,7 +102,7 @@ select {
 
 /* Ref [Z]: Minimum style to differ from unordered list */
 :where(ol) {
-  list-style-type: decimal;
+  list-style-type: revert;
 }
 
 :where(button),
