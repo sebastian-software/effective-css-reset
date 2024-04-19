@@ -47,7 +47,7 @@
   box-sizing: border-box;
 }
 
-/* Ref [A]: Reapply the pointer cursor for anchor tags */
+/* Ref [A]: Re-apply the pointer cursor for anchor tags */
 a,
 button {
   cursor: revert;
@@ -74,7 +74,7 @@ table {
 }
 
 /* Ref [Z]: Apply minimum styles for otherwise unusable elements */
-:where(input[type="radio"], input[type="checkbox"], input[type="range"], select) {
+:where(input[type="radio"], input[type="checkbox"], input[type="range"]) {
   appearance: revert;
 }
 
@@ -192,6 +192,10 @@ select {
 button,
 select {
   text-transform: none;
+}
+
+select {
+  height: 1lh;
 }
 
 /** Ref [B]: Correct the inability to style clickable types in iOS and Safari. */
