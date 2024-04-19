@@ -57,7 +57,9 @@ export function Form() {
           <CodeDoc>input type=file</CodeDoc>
         </InlineWrapper>
 
-        <h2 style={{ fontSize: "2rem", marginTop: "2rem" }}>Native:</h2>
+        <h2 style={{ fontSize: "2rem", marginTop: "2rem" }}>
+          Native Appearance:
+        </h2>
         <InlineWrapper>
           <input type="range" />
           <CodeDoc>input type=range</CodeDoc>
