@@ -22,12 +22,6 @@
   - https://caniuse.com/mdn-css_selectors_where
 */
 
-/*
-================================================================================
-    GLOBAL RESET
-================================================================================
-*/
-
 /**
  * Ref [A]: Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
  * - The "symbol *" part is to solve Firefox SVG sprite bug
@@ -48,13 +42,12 @@
 }
 
 /* Ref [A]: Re-apply the pointer cursor for anchor tags */
-a,
-button {
+:where(a, button) {
   cursor: revert;
 }
 
 /* Ref [A]/[F]: Remove spacing between cells in tables */
-table {
+:where(table) {
   border-collapse: collapse;
 }
 
@@ -112,54 +105,6 @@ table {
 /* Ref [A]: Apply back the draggable feature - exist only in Chromium and Safari */
 :where([draggable="true"]) {
   -webkit-user-drag: element;
-}
-
-/*
-================================================================================
-    SECTION STYLES
-================================================================================
-*/
-
-/* Ref [B]/[F]: Add the correct text decoration in Chrome, Edge, and Safari. */
-abbr:where([title]) {
-  text-decoration: underline dotted;
-}
-
-/**
- * Ref [B]: Improve consistency of default fonts in all browsers (https://github.com/sindresorhus/modern-normalize/issues/3)
- * and correct the odd 'em' font sizing in all browsers.
- */
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo,
-    monospace;
-  font-size: 1em;
-}
-
-/* Add the correct font size in all browsers. */
-small {
-  font-size: 80%;
-}
-
-/**
- * Ref [B]: Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
 }
 
 /**

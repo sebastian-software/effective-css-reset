@@ -4,8 +4,18 @@
   "description": "Effective CSS Reset",
   "type": "module",
   "main": "dist/index.css",
+  "exports": {
+    ".": "./dist/index.css",
+    "./reset.css": "./dist/reset.css",
+    "./typography.css": "./dist/typography.css",
+    "./enhancement.css": "./dist/enhancement.css"
+  },
   "scripts": {
-    "build": "rimraf dist && lightningcss --bundle --output-file dist/index.css --minify src/index.css",
+    "build": "rimraf dist && npm run build:index && npm run build:reset && npm run build:typography && npm run build:enhancement",
+    "build:index": "lightningcss --bundle --output-file dist/index.css --minify src/index.css",
+    "build:reset": "lightningcss --bundle --output-file dist/reset.css --minify src/reset.css",
+    "build:typography": "lightningcss --bundle --output-file dist/typography.css --minify src/typography.css",
+    "build:enhancement": "lightningcss --bundle --output-file dist/enhancement.css --minify src/enhancement.css",
     "prepare": "npm run build",
     "format": "prettier --write src",
     "release": "release-it",

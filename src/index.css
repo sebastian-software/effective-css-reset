@@ -1,2 +1,3 @@
-@import "./ResetNative.css";
-@import "./SensibleEnhancements.css";
+@import "./reset.css";
+@import "./typography.css";
+@import "./enhancement.css";
