@@ -14,6 +14,26 @@ Welcome to the **Effective/CSS Reset**, a cutting-edge CSS reset infused with se
 
 Explore our [Storybook Demo](https://effective-css-reset.vercel.app/), hosted on Vercel, to see the various resetted elements in action. This interactive demo provides a firsthand look at how our CSS reset performs across different elements and browsers.
 
+## Usage
+
+Install the package using your normal package manager e.g.
+
+```
+npm install @effective/css-reset
+```
+
+Integrate the CSS using an `import` statement which should work fine in Vite/Remix/NextJS:
+
+```ts
+import "@effective/css-reset"
+```
+
+Alternatively you can cherry pick the individual files by choosing any number of the exported entry points:
+
+1. `import "@effective/css-reset/reset.css"`: Resetting all core elements
+2. `import "@effective/css-reset/typography.css"`: Enhance typography with better defaults
+3. `import "@effective/css-reset/enhancement.css"`: Further enhancements to form fields, buttons, ...
+
 ## Acknowledgements
 
 This project builds upon the contributions of several key resources in the web development community. We extend our gratitude to the authors and maintainers of these works for their insights and innovations:
