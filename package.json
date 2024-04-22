@@ -1,6 +1,6 @@
 {
   "name": "@effective/css-reset",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Effective CSS Reset",
   "type": "module",
   "main": "dist/index.css",
