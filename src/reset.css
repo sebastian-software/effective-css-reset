@@ -26,9 +26,71 @@
  * Ref [A]: Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
  * - The "symbol *" part is to solve Firefox SVG sprite bug
  * - See also: https://caniuse.com/css-unset-value
+ * Ref [Z]: Unfortunately this selector from [A] also selects all custom elements
+ * and therefor might break expectations. As there is no wild-card selector for
+ * custom elements, we have to list relevant built-in elements manually.
  */
-*:where(
-    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+:where(
+    a,
+    abbr,
+    address,
+    article,
+    aside,
+    blockquote,
+    body,
+    button,
+    caption,
+    cite,
+    code,
+    details,
+    dfn,
+    div,
+    em,
+    fieldset,
+    figcaption,
+    figure,
+    footer,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    header,
+    hr,
+    i,
+    input,
+    label,
+    legend,
+    li,
+    main,
+    mark,
+    nav,
+    ol,
+    optgroup,
+    option,
+    p,
+    pre,
+    q,
+    s,
+    section,
+    select,
+    small,
+    span,
+    strong,
+    sub,
+    sup,
+    table,
+    tbody,
+    td,
+    textarea,
+    tfoot,
+    th,
+    thead,
+    time,
+    tr,
+    ul
   ) {
   all: unset;
   display: revert;
