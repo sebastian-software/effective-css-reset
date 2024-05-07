@@ -35,6 +35,20 @@ input:not(
   border: 1px solid;
 }
 
+input:not(
+    :where(
+        [type="file"],
+        [type="checkbox"],
+        [type="radio"],
+        [type="button"],
+        [type="reset"],
+        [type="submit"],
+        [type="range"],
+        [type="color"]
+      )
+  ) {
+  padding-inline: 0.5em;
+}
 /* Ref [Z]: Adding simple border to input fields for a slight separation from normal text */
 select {
   border: 1px solid;
@@ -57,6 +71,7 @@ input:where([type="button"], [type="reset"], [type="submit"]),
 ::file-selector-button {
   border: 1px solid;
   background: ButtonFace;
+  padding-inline: 0.5em;
 }
 
 /* Ref [Z]: Make sure dividers are visible by default */
