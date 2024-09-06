@@ -49,6 +49,7 @@ input:not(
   ) {
   padding-inline: 0.5em;
 }
+
 /* Ref [Z]: Adding simple border to input fields for a slight separation from normal text */
 select {
   border: 1px solid;
