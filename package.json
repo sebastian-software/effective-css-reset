@@ -47,21 +47,21 @@
     "access": "public"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.0.10",
-    "@storybook/blocks": "^8.0.10",
-    "@storybook/react": "^8.0.10",
-    "@storybook/react-vite": "^8.0.10",
-    "@types/react": "^18.3.1",
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/react": "^8.2.9",
+    "@storybook/react-vite": "^8.2.9",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
-    "lightningcss-cli": "^1.24.1",
-    "npm-check-updates": "^16.14.20",
-    "prettier": "^3.2.5",
+    "lightningcss-cli": "^1.26.0",
+    "npm-check-updates": "^17.1.1",
+    "prettier": "^3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "release-it": "^17.2.1",
-    "rimraf": "^5.0.5",
-    "storybook": "^8.0.10",
-    "typescript": "^5.4.5"
+    "release-it": "^17.6.0",
+    "rimraf": "^6.0.1",
+    "storybook": "^8.2.9",
+    "typescript": "^5.5.4"
   },
   "packageManager": "pnpm@8.15.7+sha256.50783dd0fa303852de2dd1557cd4b9f07cb5b018154a6e76d0f40635d6cee019"
 }
